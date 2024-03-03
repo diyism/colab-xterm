@@ -45,7 +45,7 @@ def load_ipython_extension(ipython):
     )
 
 
-def _xterm_magic(args_string):
+def _xterm_magic(args_string, cell):
     context = _get_context()
     try:
         import IPython
@@ -76,6 +76,7 @@ def _xterm_magic(args_string):
     parsed_args = shlex.split(args_string, comments=True, posix=True)
     height = 800
     port = 10000
+    print(cell.strip())
 
     # Setup parameter from parsed_args to support the following format.
     # %xterm height=300 port=10001
