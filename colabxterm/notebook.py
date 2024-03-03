@@ -40,7 +40,7 @@ def load_ipython_extension(ipython):
     """
     ipython.register_magic_function(
         _xterm_magic,
-        magic_kind="line",
+        magic_kind="cell",
         magic_name="xterm",
     )
 
